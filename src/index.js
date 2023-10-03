@@ -1,4 +1,5 @@
 const express = require("express");
+require("dotenv").config()
 require("./db/db-properties");
 const cors = require('cors');
 const app = express();
@@ -41,6 +42,6 @@ const statementRouter = require('./routers/statement')(app);
 
 
 app.listen(process.env.PORT, () => {
-  console.log("Server is up on port " + process.env.PORT);
+  console.log("Started server on port " + process.env.PORT);
 });
 
