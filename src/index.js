@@ -40,7 +40,7 @@ app.use("/uploads",express.static(__dirname + "./../uploads"))
 const statementRouter = require('./routers/statement')(app);
 
 
-app.listen(port, () => {
-  console.log("Server is up on port " + port);
+app.listen(process.env.PORT, () => {
+  console.log("Server is up on port " + process.env.PORT);
 });
 
